@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+gemspec
+
+gem 'rails', '~> 3.2.0'
+
+platforms :mri do
+  if RUBY_VERSION < '1.9'
+    gem 'test-unit', '~> 2.5'
+  else
+    gem 'test-unit'
+  end
+end
